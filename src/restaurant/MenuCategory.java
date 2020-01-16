@@ -1,5 +1,5 @@
 package restaurant;
 
-public class MenuCategory {
+public enum MenuCategory {
     APPETIZER, MAIN_COURSE, DESSERT;
 }

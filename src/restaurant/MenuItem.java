@@ -20,8 +20,25 @@ public class MenuItem {
         this(menuId, description, price, category, false);
     }
 
-    public MenuCategory getCategory() {
-        return Category;
+    public int getMenuId() {
+        return menuId;
     }
+
+    public MenuCategory getCategory() {
+        return category;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean getIsNew() {
+        return isNew;
+    }
+
 
 }
