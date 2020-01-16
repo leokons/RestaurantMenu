@@ -2,19 +2,26 @@ package restaurant;
 
 public class MenuItem {
     private final int menuId;
-    double price;
     private final String description;
-    private String category;
+    private final double price;
+    private final MenuCategory category;
     //= {"appetizer", "main course", "dessert"};
-    private String ifNew;
+    private boolean isNew;
 
-    public MenuItem(String name, double price, String description, String category, String ifNew) {
+    public MenuItem(int menuId, String description, double price, MenuCategory category, boolean isNew) {
         this.menuId=menuId;
-        this.price=price;
         this.description=description;
+        this.price=price;
         this.category=category;
-        this.ifNew=ifNew;
+        this.isNew=isNew;
+    }
 
+    public MenuItem(int menuId, String description, double price, MenuCategory category) {
+        this(menuId, description, price, category, false);
+    }
+
+    public MenuCategory getCategory() {
+        return Category;
     }
 
 }
