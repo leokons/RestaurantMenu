@@ -5,7 +5,6 @@ public class MenuItem {
     private final String description;
     private final double price;
     private final MenuCategory category;
-    //= {"appetizer", "main course", "dessert"};
     private boolean isNew;
 
     public MenuItem(int menuId, String description, double price, MenuCategory category, boolean isNew) {
@@ -38,6 +37,30 @@ public class MenuItem {
 
     public boolean getIsNew() {
         return isNew;
+    }
+
+    @Override
+    public String toString() {
+        return menuId + " " + description + " " + price + " " + category + " "
+                + (isNew ? "new menu item" : "old menu item");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (!(o instanceof MenuItem)) {
+            return false;
+        }
+
+        MenuItem menuItem = (MenuItem) o;
+
+        return this.getCategory() == menuItem.getCategory() && this.getDescription() == menuItem.getDescription()
+                && this.getMenuId() == menuItem.getMenuId() && this.getPrice() == menuItem.getPrice();
     }
 
 
